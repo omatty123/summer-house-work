@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Front Step Masonry Research - Summer House Work</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --sand: #f5f0e8; --warm-white: #fefcf9; --slate: #334155;
+      --slate-light: #64748b; --accent: #dc2626; --accent-light: #fee2e2;
+      --border: #e2ddd5; --shadow: rgba(51,65,85,0.08);
+    }
+    body { font-family: 'IBM Plex Sans', -apple-system, sans-serif; background: var(--sand); color: var(--slate); line-height: 1.6; }
+    .page { max-width: 800px; margin: 0 auto; padding: 2rem 1.5rem; }
+    .breadcrumb { font-size: 0.8rem; margin-bottom: 1.5rem; }
+    .breadcrumb a { color: var(--accent); text-decoration: none; }
+    .breadcrumb a:hover { text-decoration: underline; }
+    h1 { font-size: 1.6rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 0.25rem; }
+    .spec { font-size: 0.85rem; color: var(--slate-light); margin-bottom: 2rem; }
+    h2 { font-size: 1.1rem; font-weight: 700; margin: 2rem 0 0.75rem; padding-bottom: 0.4rem; border-bottom: 2px solid var(--accent); }
+    h3 { font-size: 0.95rem; font-weight: 600; margin: 1.25rem 0 0.5rem; }
+    p, li { font-size: 0.85rem; }
+    p { margin-bottom: 0.75rem; }
+    ul, ol { margin-left: 1.25rem; margin-bottom: 0.75rem; }
+    li { margin-bottom: 0.3rem; }
+    .card { background: var(--warm-white); border: 1px solid var(--border); border-radius: 10px; padding: 1.25rem 1.5rem; margin-bottom: 1rem; box-shadow: 0 2px 8px var(--shadow); }
+    .card h3 { margin-top: 0; }
+    table { width: 100%; border-collapse: collapse; margin-bottom: 1rem; font-size: 0.8rem; }
+    th, td { text-align: left; padding: 0.5rem 0.6rem; border-bottom: 1px solid var(--border); }
+    th { font-weight: 600; background: var(--accent-light); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.03em; }
+    tr:last-child td { border-bottom: none; }
+    .cost-highlight { background: var(--accent-light); border-left: 3px solid var(--accent); padding: 0.75rem 1rem; border-radius: 0 6px 6px 0; margin-bottom: 1rem; font-size: 0.85rem; }
+    .cost-highlight strong { color: var(--accent); }
+    .warning { background: #fef3c7; border-left: 3px solid #f59e0b; padding: 0.75rem 1rem; border-radius: 0 6px 6px 0; margin-bottom: 1rem; font-size: 0.85rem; }
+    .tip { background: #eff6ff; border-left: 3px solid #3b82f6; padding: 0.75rem 1rem; border-radius: 0 6px 6px 0; margin-bottom: 1rem; font-size: 0.85rem; }
+    @media (max-width: 600px) { .page { padding: 1rem; } table { font-size: 0.7rem; } th, td { padding: 0.35rem; } }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="breadcrumb"><a href="index.html">&larr; Back to Summer House Work</a></div>
+    <h1>Front Step Masonry Deep Dive</h1>
+    <p class="spec">1 step, possibly 2. Masonry repair.</p>
+
+    <h2>Cost Summary</h2>
+    <div class="cost-highlight">
+      <strong>DIY materials:</strong> $30-$80 (plus $30-$50 for tools if needed)<br>
+      <strong>Pro patch/repair:</strong> $100-$800<br>
+      <strong>Full step replacement (pro):</strong> $300-$1,500+
+    </div>
+
+    <h2>Common Problems</h2>
+    <div class="card">
+      <table>
+        <tr><th>Problem</th><th>What It Looks Like</th><th>Cause</th></tr>
+        <tr><td>Surface spalling/scaling</td><td>Top layer flakes off in sheets or chips</td><td>Freeze-thaw, deicing salt, poor finishing</td></tr>
+        <tr><td>Cracking</td><td>Hairline to 1/8"+ cracks</td><td>Settling, frost heave</td></tr>
+        <tr><td>Crumbling edges/corners</td><td>Corners breaking down</td><td>Impact, age, weather</td></tr>
+        <tr><td>Settling/sinking</td><td>Step pulls away from house or tilts</td><td>Structural, soil issues</td></tr>
+        <tr><td>Mortar deterioration (brick)</td><td>Joints erode, turn sandy</td><td>Age, water infiltration</td></tr>
+        <tr><td>Loose bricks</td><td>Bricks shift when stepped on</td><td>Failed mortar</td></tr>
+      </table>
+    </div>
+
+    <h2>DIY vs. Professional</h2>
+    <div class="card">
+      <table>
+        <tr><th>Repair Type</th><th>DIY?</th><th>Notes</th></tr>
+        <tr><td>Filling hairline cracks</td><td>Yes, easy</td><td>Caulk-tube products, minimal skill</td></tr>
+        <tr><td>Patching spalled surface</td><td>Yes, moderate</td><td>Needs proper prep and bonding agent</td></tr>
+        <tr><td>Resurfacing worn top</td><td>Yes, moderate</td><td>Fast-setting products, work quickly</td></tr>
+        <tr><td>Repointing brick mortar</td><td>Yes, moderate</td><td>Labor-intensive but straightforward</td></tr>
+        <tr><td>Rebuilding crumbled corner</td><td>Moderate-hard</td><td>Requires form-building</td></tr>
+        <tr><td>Fixing sinking/tilting step</td><td>No, hire pro</td><td>Structural. Mudjacking or replacement.</td></tr>
+        <tr><td>Full step replacement</td><td>No, hire pro</td><td>Demolition, forming, pouring, finishing</td></tr>
+      </table>
+    </div>
+
+    <h2>Repair Options by Problem</h2>
+
+    <div class="card">
+      <h3>Surface Spalling/Crumbling</h3>
+      <p>Apply polymer-modified resurfacer or vinyl patcher over damaged area. Bonds to old concrete and creates a new wear surface. Minimum 1/16" (feather edge) up to 1/2"-2" depending on product.</p>
+
+      <h3>Cracked Concrete</h3>
+      <ul>
+        <li><strong>Hairline cracks:</strong> Concrete crack filler in caulk tube. Squeeze in, smooth, done.</li>
+        <li><strong>Up to 1/2":</strong> Vinyl concrete patcher or hydraulic cement, troweled.</li>
+        <li><strong>Wider than 1/2":</strong> May indicate structural problems. Assess before patching.</li>
+      </ul>
+
+      <h3>Loose/Crumbling Mortar (Brick Steps) -- Repointing</h3>
+      <p>Remove old mortar to 3/4" depth with cold chisel or angle grinder with diamond blade. Dampen joints. Pack new Type N mortar in 3-4 thin layers. Tool joints to match existing profile. Mist for 3 days to cure. Properly repointed brick can last 30-50 years.</p>
+      <div class="tip"><strong>Use Type N mortar for steps.</strong> Softer and more flexible than Type S or M. Moves with bricks through freeze-thaw instead of fighting them.</div>
+    </div>
+
+    <h2>Products (Home Depot / Lowe's)</h2>
+    <div class="card">
+      <h3>Patching Compounds</h3>
+      <table>
+        <tr><th>Product</th><th>Size</th><th>Price</th><th>Best For</th></tr>
+        <tr><td>Quikrete Vinyl Concrete Patcher</td><td>10 lb</td><td>$10-$12</td><td>The workhorse. Spalls, cracks, pits. Feather edge to 1/2".</td></tr>
+        <tr><td>Sakrete Top N Bond</td><td>10 lb</td><td>$10-$14</td><td>8-10x stronger bond than regular. Up to 2" thick.</td></tr>
+        <tr><td>Sika Sikacryl Ready-Mix Patch</td><td>1 qt / 1 gal</td><td>$10 / $30-$34</td><td>Pre-mixed. No measuring. Small repairs.</td></tr>
+      </table>
+
+      <h3>Resurfacers</h3>
+      <table>
+        <tr><th>Product</th><th>Size</th><th>Price</th><th>Notes</th></tr>
+        <tr><td>Quikrete Re-Cap Resurfacer</td><td>40 lb</td><td>$28-$37</td><td>Complete new surface, 1/16" to 1/2". Sets fast (under 10 min working time).</td></tr>
+        <tr><td>Quikrete Concrete Resurfacer</td><td>40 lb</td><td>Similar</td><td>Squeegee or trowel. Covers ~90 sq ft at 1/16".</td></tr>
+      </table>
+
+      <h3>Essential Supplies</h3>
+      <table>
+        <tr><th>Product</th><th>Price</th><th>Notes</th></tr>
+        <tr><td>Quikrete Concrete Bonding Adhesive (1 qt)</td><td>$10-$12</td><td>Non-negotiable. New concrete won't bond to old without it.</td></tr>
+        <tr><td>Quikrete Type N Mortar Mix (10 lb)</td><td>$7-$9</td><td>For repointing brick. 10 lb is plenty for 1-2 steps.</td></tr>
+        <tr><td>Quikrete Concrete Crack Seal (caulk tube)</td><td>$6-$8</td><td>Self-leveling, hairline to 1/2" cracks.</td></tr>
+        <tr><td>Quikrete Liquid Cement Color</td><td>$8-$12</td><td>Charcoal, brown, buff, terra cotta, red.</td></tr>
+      </table>
+    </div>
+
+    <h2>Step-by-Step Process</h2>
+
+    <div class="card">
+      <h3>Scenario A: Concrete Step Resurfacing</h3>
+      <ol>
+        <li><strong>Clean thoroughly.</strong> Pressure wash 1,500-2,000 PSI, or wire brush + hose. Remove all loose material.</li>
+        <li><strong>Chip away loose concrete</strong> with cold chisel and hammer. Get down to solid concrete. Minimum 1/4" depth (no thin feathered edges).</li>
+        <li><strong>Dampen the surface.</strong> Damp but not puddled ("saturated-surface-dry").</li>
+        <li><strong>Apply bonding adhesive.</strong> Brush on, let get tacky but not fully dry.</li>
+        <li><strong>Mix patcher.</strong> Thick, trowelable (peanut butter, not pancake batter).</li>
+        <li><strong>Apply and trowel.</strong> Press firmly, work into cracks/pits. Wood float for non-slip texture on horizontal surfaces.</li>
+        <li><strong>Finish edges</strong> with edging tool for clean rounded step nose.</li>
+        <li><strong>Cure.</strong> Keep moist 24-48 hrs. Cover with plastic or mist. No walking for 24 hrs.</li>
+      </ol>
+    </div>
+
+    <div class="card">
+      <h3>Scenario B: Brick Step Repointing</h3>
+      <ol>
+        <li><strong>Remove old mortar</strong> to 3/4" depth. Cold chisel + hammer, grout saw, or angle grinder with 4-1/2" diamond blade.</li>
+        <li><strong>Clean joints.</strong> Stiff brush, blow out dust, rinse with water.</li>
+        <li><strong>Dampen joints.</strong> Spray and let soak. Damp, not dripping.</li>
+        <li><strong>Mix Type N mortar.</strong> Thick peanut butter consistency. Should hold shape on trowel held sideways.</li>
+        <li><strong>Pack mortar in layers.</strong> Fill horizontal (bed) joints first, then vertical (head). Apply in 3-4 thin layers, compacting each firmly.</li>
+        <li><strong>Tool the joints</strong> when "thumbprint firm" (press without sticking). Match existing profile (concave, flush, raked).</li>
+        <li><strong>Clean excess</strong> with dry stiff brush once set enough not to smear.</li>
+        <li><strong>Cure.</strong> Mist 2-3 times/day for 3+ days. Don't let it bake in direct sun uncovered.</li>
+      </ol>
+    </div>
+
+    <h2>Professional Costs</h2>
+    <div class="card">
+      <table>
+        <tr><th>Service</th><th>Cost</th></tr>
+        <tr><td>Mason hourly rate</td><td>$40-$75/hr</td></tr>
+        <tr><td>Small patch/crack repair</td><td>$100-$500</td></tr>
+        <tr><td>Moderate repair (resurfacing, repointing)</td><td>$300-$800</td></tr>
+        <tr><td>Full step replacement, precast (1-2 steps)</td><td>$300-$750 installed</td></tr>
+        <tr><td>Full step replacement, poured (1-2 steps)</td><td>$500-$1,500+</td></tr>
+        <tr><td>Demolition/removal of old steps</td><td>$200-$400 additional</td></tr>
+      </table>
+    </div>
+    <div class="warning"><strong>The small job problem is real.</strong> Many masons have $200-$500 minimum charges. A 1-2 step repair might be 2-4 hrs of work, but between travel, setup, and cleanup it's not economical for them. Strategies: ask handymen (lower minimums), bundle with other masonry work, check Nextdoor for masons who do small jobs, ask in off-season (winter/early spring).</div>
+
+    <h2>Timing and Temperature</h2>
+    <table>
+      <tr><th>Condition</th><th>Guidance</th></tr>
+      <tr><td>Below 40F</td><td>Do not do masonry work. Won't cure properly.</td></tr>
+      <tr><td>40-50F</td><td>Risky. Nighttime freezing ruins fresh work.</td></tr>
+      <tr><td>50-80F</td><td>Ideal range.</td></tr>
+      <tr><td>Above 90F</td><td>Sets too fast. Work in morning shade, mist frequently.</td></tr>
+      <tr><td>Rain expected</td><td>Don't start. Need 24-48 hrs dry.</td></tr>
+    </table>
+    <p><strong>Plan for 2-3 consecutive days of dry weather above 50F.</strong> Best window: late spring through mid-fall.</p>
+
+    <div class="card">
+      <h3>Cure Times</h3>
+      <table>
+        <tr><td>Vinyl patchers</td><td>24 hrs foot traffic, 48-72 hrs full cure</td></tr>
+        <tr><td>Resurfacers</td><td>6-8 hrs foot traffic, 24 hrs heavy use</td></tr>
+        <tr><td>Mortar (repointing)</td><td>24-48 hrs set, 3+ days moist cure, 28 days full</td></tr>
+        <tr><td>Fast-set products (Sika SikaQuick)</td><td>15 min set, 1-2 hrs foot traffic</td></tr>
+      </table>
+    </div>
+
+    <h2>Color Matching</h2>
+    <div class="card">
+      <p><strong>Concrete color matching is genuinely difficult.</strong> New concrete is always lighter than weathered concrete.</p>
+      <ul>
+        <li>Pressure wash old surface first. Much of the difference is dirt and mold.</li>
+        <li>Use Quikrete Liquid Cement Color mixed into patcher. Test batch first (color changes as it cures). Let dry completely before comparing.</li>
+        <li>Expect imperfection. Even pros can't perfectly match 20-year-old concrete. It converges over time as new material weathers.</li>
+        <li>Consider resurfacing the entire step face rather than spot-patching. Uniform new surface looks better than patchwork.</li>
+      </ul>
+      <p><strong>For mortar matching (brick):</strong> Take a sample of old mortar to the store. Sand has the biggest impact on color. Mix test batches on scrap wood, let dry completely before comparing. Mortar gets significantly lighter as it dries.</p>
+    </div>
+
+    <h2>Repair vs. Replace</h2>
+    <div class="card">
+      <table>
+        <tr><th>Repair When...</th><th>Replace When...</th></tr>
+        <tr><td>Damage is surface-level</td><td>Cracks wider than 1/8" and growing</td></tr>
+        <tr><td>Crumbling limited to one area</td><td>Multiple areas crumbling, new pieces break off during prep</td></tr>
+        <tr><td>Step is structurally sound</td><td>Sinking, tilting, or separating from house</td></tr>
+        <tr><td>Patch depth under 2 inches</td><td>Concrete sounds hollow when tapped (delaminated)</td></tr>
+        <tr><td></td><td>You've already patched it and patches are failing</td></tr>
+        <tr><td></td><td>Damage covers 25-30%+ of surface</td></tr>
+      </table>
+      <div class="warning"><strong>The honest rule:</strong> If you're patching a patch, it's time to replace. A $30 bag of patcher is cheap, but your third repair in 5 years means the underlying concrete is done.</div>
+    </div>
+
+    <h2>Tips and Gotchas</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Prep is everything.</strong> The #1 reason DIY repairs fail is skipping prep. Don't skip the bonding agent, don't leave loose material, don't apply to dry concrete.</li>
+        <li><strong>Never skip the bonding agent.</strong> New concrete does not bond to old on its own. Without it, your patch delaminates within one winter.</li>
+        <li><strong>Never mix bonding agent into the patching material.</strong> Counterintuitive but critical. Mixing it in creates a bond breaker. Apply separately to the substrate.</li>
+        <li><strong>Do not feather edges.</strong> Thin edges under 1/4" crack and pop off. Chisel a clean vertical edge at least 1/4" deep.</li>
+        <li><strong>Work fast with resurfacers.</strong> Quikrete Re-Cap sets in 5-10 minutes. Mix only what you can apply in that window.</li>
+        <li><strong>Dampen, do not soak.</strong> Damp to the touch, not puddled. Excess water weakens the bond.</li>
+        <li><strong>Cure properly.</strong> Cover or mist 2-3 days minimum. Concrete gains strength through hydration, not drying.</li>
+        <li><strong>Undercut for vertical/edge repairs.</strong> Make the opening wider at the back than front. Creates a mechanical lock that keeps patch from falling off.</li>
+        <li><strong>Do not over-trowel.</strong> Excessive smoothing brings water to surface, creating a weak dusty layer.</li>
+        <li><strong>Buy small bags.</strong> 10-20 lbs is plenty for 1-2 steps. Opened products absorb moisture and harden in storage.</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
