@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Summer House Work</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --sand: #f5f0e8;
+      --warm-white: #fefcf9;
+      --slate: #334155;
+      --slate-light: #64748b;
+      --accent-pergola: #16a34a;
+      --accent-epoxy: #2563eb;
+      --accent-masonry: #dc2626;
+      --border: #e2ddd5;
+      --shadow: rgba(51, 65, 85, 0.08);
+    }
+
+    body {
+      font-family: 'IBM Plex Sans', -apple-system, sans-serif;
+      background: var(--sand);
+      color: var(--slate);
+      min-height: 100vh;
+    }
+
+    .page {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+
+    header {
+      margin-bottom: 2rem;
+    }
+
+    h1 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.25rem;
+    }
+
+    .subtitle {
+      font-size: 0.85rem;
+      color: var(--slate-light);
+    }
+
+    .jobs {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+    }
+
+    .job {
+      background: var(--warm-white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.25rem 1.5rem;
+      box-shadow: 0 2px 8px var(--shadow);
+      display: grid;
+      grid-template-columns: 4px 1fr auto;
+      gap: 1rem;
+      align-items: start;
+    }
+
+    .job-accent {
+      width: 4px;
+      height: 100%;
+      border-radius: 2px;
+      min-height: 40px;
+    }
+
+    .job--pergola .job-accent { background: var(--accent-pergola); }
+    .job--epoxy .job-accent { background: var(--accent-epoxy); }
+    .job--masonry .job-accent { background: var(--accent-masonry); }
+
+    .job-body { min-width: 0; }
+
+    .job-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.15rem;
+    }
+
+    .job-description {
+      font-size: 0.8rem;
+      color: var(--slate-light);
+      line-height: 1.5;
+      margin-bottom: 0.75rem;
+    }
+
+    .checklist {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .checklist li {
+      font-size: 0.8rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .checklist input[type="checkbox"] {
+      width: 16px;
+      height: 16px;
+      accent-color: var(--slate);
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+
+    .checklist label {
+      cursor: pointer;
+      line-height: 1.3;
+    }
+
+    .checklist input:checked + label {
+      text-decoration: line-through;
+      color: var(--slate-light);
+    }
+
+    .status-badge {
+      font-size: 0.65rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 0.25rem 0.6rem;
+      border-radius: 4px;
+      white-space: nowrap;
+      height: fit-content;
+    }
+
+    .status--planning {
+      background: #fef3c7;
+      color: #92400e;
+    }
+
+    .status--in-progress {
+      background: #dbeafe;
+      color: #1e40af;
+    }
+
+    .status--done {
+      background: #dcfce7;
+      color: #166534;
+    }
+
+    .notes-section {
+      margin-top: 2rem;
+      background: var(--warm-white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.25rem 1.5rem;
+      box-shadow: 0 2px 8px var(--shadow);
+    }
+
+    .notes-section h2 {
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    #notes {
+      width: 100%;
+      min-height: 80px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 0.6rem 0.8rem;
+      font-family: inherit;
+      font-size: 0.8rem;
+      color: var(--slate);
+      resize: vertical;
+      background: var(--sand);
+    }
+
+    #notes:focus {
+      outline: none;
+      border-color: var(--slate-light);
+    }
+
+    .saved-indicator {
+      font-size: 0.7rem;
+      color: var(--slate-light);
+      margin-top: 0.35rem;
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+
+    .saved-indicator.visible { opacity: 1; }
+
+    @media (min-width: 640px) {
+      .jobs {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+      .job {
+        grid-template-columns: 4px 1fr;
+        grid-template-rows: auto 1fr;
+      }
+      .status-badge {
+        grid-column: 1 / -1;
+        justify-self: start;
+        order: -1;
+      }
+    }
+
+    @media (max-width: 639px) {
+      .job {
+        grid-template-columns: 4px 1fr auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <h1>Summer House Work</h1>
+      <p class="subtitle">2026 projects — pergola, basement epoxy, front step masonry</p>
+    </header>
+
+    <div class="jobs">
+
+      <div class="job job--pergola">
+        <div class="job-accent"></div>
+        <div class="job-body">
+          <div class="job-title">Pergola</div>
+          <p class="job-description">Design and build backyard pergola.</p>
+          <ul class="checklist" data-job="pergola">
+            <li><input type="checkbox" id="p1"><label for="p1">Research designs and materials</label></li>
+            <li><input type="checkbox" id="p2"><label for="p2">Get quotes / choose contractor</label></li>
+            <li><input type="checkbox" id="p3"><label for="p3">Permits (if needed)</label></li>
+            <li><input type="checkbox" id="p4"><label for="p4">Schedule build</label></li>
+            <li><input type="checkbox" id="p5"><label for="p5">Complete</label></li>
+          </ul>
+        </div>
+        <span class="status-badge status--planning" data-status="pergola">Planning</span>
+      </div>
+
+      <div class="job job--epoxy">
+        <div class="job-accent"></div>
+        <div class="job-body">
+          <div class="job-title">Basement Floor Epoxy</div>
+          <p class="job-description">Epoxy coat the basement floor.</p>
+          <ul class="checklist" data-job="epoxy">
+            <li><input type="checkbox" id="e1"><label for="e1">Research epoxy options (DIY vs pro)</label></li>
+            <li><input type="checkbox" id="e2"><label for="e2">Get quotes</label></li>
+            <li><input type="checkbox" id="e3"><label for="e3">Prep floor (clean, patch, etch)</label></li>
+            <li><input type="checkbox" id="e4"><label for="e4">Clear basement</label></li>
+            <li><input type="checkbox" id="e5"><label for="e5">Apply epoxy</label></li>
+            <li><input type="checkbox" id="e6"><label for="e6">Cure and move back in</label></li>
+          </ul>
+        </div>
+        <span class="status-badge status--planning" data-status="epoxy">Planning</span>
+      </div>
+
+      <div class="job job--masonry">
+        <div class="job-accent"></div>
+        <div class="job-body">
+          <div class="job-title">Front Step Fix</div>
+          <p class="job-description">Masonry repair on front steps.</p>
+          <ul class="checklist" data-job="masonry">
+            <li><input type="checkbox" id="m1"><label for="m1">Assess damage / take photos</label></li>
+            <li><input type="checkbox" id="m2"><label for="m2">Get mason quotes</label></li>
+            <li><input type="checkbox" id="m3"><label for="m3">Choose contractor</label></li>
+            <li><input type="checkbox" id="m4"><label for="m4">Schedule repair</label></li>
+            <li><input type="checkbox" id="m5"><label for="m5">Complete</label></li>
+          </ul>
+        </div>
+        <span class="status-badge status--planning" data-status="masonry">Planning</span>
+      </div>
+
+    </div>
+
+    <div class="notes-section">
+      <h2>Notes</h2>
+      <textarea id="notes" placeholder="Contractor names, pricing, timelines..."></textarea>
+      <div class="saved-indicator" id="savedMsg">Saved</div>
+    </div>
+  </div>
+
+  <script>
+    // Persist checkbox state
+    const STORAGE_KEY = 'summer-house-work';
+
+    function loadState() {
+      const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+      document.querySelectorAll('.checklist input[type="checkbox"]').forEach(cb => {
+        if (saved[cb.id]) cb.checked = true;
+      });
+      if (saved.notes) document.getElementById('notes').value = saved.notes;
+      updateStatuses();
+    }
+
+    function saveState() {
+      const state = {};
+      document.querySelectorAll('.checklist input[type="checkbox"]').forEach(cb => {
+        if (cb.checked) state[cb.id] = true;
+      });
+      state.notes = document.getElementById('notes').value;
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    }
+
+    function updateStatuses() {
+      document.querySelectorAll('.checklist').forEach(list => {
+        const job = list.dataset.job;
+        const boxes = list.querySelectorAll('input[type="checkbox"]');
+        const checked = Array.from(boxes).filter(b => b.checked).length;
+        const badge = document.querySelector(`[data-status="${job}"]`);
+        if (!badge) return;
+
+        if (checked === boxes.length) {
+          badge.textContent = 'Done';
+          badge.className = 'status-badge status--done';
+        } else if (checked > 0) {
+          badge.textContent = 'In Progress';
+          badge.className = 'status-badge status--in-progress';
+        } else {
+          badge.textContent = 'Planning';
+          badge.className = 'status-badge status--planning';
+        }
+      });
+    }
+
+    document.querySelectorAll('.checklist input[type="checkbox"]').forEach(cb => {
+      cb.addEventListener('change', () => { saveState(); updateStatuses(); });
+    });
+
+    const notes = document.getElementById('notes');
+    const savedMsg = document.getElementById('savedMsg');
+    let saveTimeout;
+    notes.addEventListener('input', () => {
+      clearTimeout(saveTimeout);
+      saveTimeout = setTimeout(() => {
+        saveState();
+        savedMsg.classList.add('visible');
+        setTimeout(() => savedMsg.classList.remove('visible'), 1500);
+      }, 500);
+    });
+
+    loadState();
+  </script>
+</body>
+</html>
